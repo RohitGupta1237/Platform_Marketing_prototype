@@ -11,7 +11,7 @@ var jsonParser=bodyParser.json();
 var crypto=require('crypto');
 var key='password';
 var algo='aes256';
-mongoose.connect('mongodb+srv://rohitgupta12371380:zYZb7EMXTOdciQGx@cluster0.uh6dubm.mongodb.net/rohitgupta0502?retryWrites=true&w=majority', 
+mongoose.connect('hi', 
 {
   useNewUrlParser: true,
   useUnifiedTopology: true,
