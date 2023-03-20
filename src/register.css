@@ -1,0 +1,54 @@
+.RegistrationForm {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .RegistrationForm h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .RegistrationForm form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .RegistrationForm .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .RegistrationForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  
+  .RegistrationForm input {
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    font-size: 16px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .RegistrationForm button {
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .RegistrationForm button:hover {
+    background-color: #166fe5;
+  }
+  

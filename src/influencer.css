@@ -1,0 +1,48 @@
+.LoginPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+  
+  .buttons {
+    display: flex;
+  }
+  
+  .button {
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: #fff;
+    background-color: #4caf50;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .new-user-button {
+    background-color: #2196f3;
+  }
+  
+  .new-user-button:hover {
+    background-color: #0c7cd5;
+  }
+  
+  .already-user-button {
+    background-color: #f44336;
+  }
+  
+  .already-user-button:hover {
+    background-color: #d5241c;
+  }
+  

@@ -1,0 +1,113 @@
+/* Profile pa bkhbkhbge */
+
+.ProfilePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ProfilePage-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .ProfilePage-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  
+  .ProfilePage-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .ProfilePage-userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .ProfilePage-userInfo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  .ProfilePage-subtitle {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .ProfilePage-subtitle svg {
+    margin-right: 5px;
+    font-size: 1.5rem;
+  }
+  
+  .ProfilePage-followers {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .ProfilePage-followers svg {
+    margin-right: 5px;
+    font-size: 1.5rem;
+  }
+  
+  .ProfilePage-subscribers {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  
+  .ProfilePage-subscribers svg {
+    margin-right: 5px;
+    font-size: 1.5rem;
+  }
+  
+  .ProfilePage-details {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .ProfilePage-details-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .ProfilePage-details-header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  .ProfilePage-detail-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .ProfilePage-detail-item svg {
+    margin-right: 5px;
+    font-size: 1.5rem;
+  }
+  
+  .ProfilePage-detail-text {
+    margin-left: 10px;
+  }
+  
