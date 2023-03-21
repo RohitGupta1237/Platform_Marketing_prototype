@@ -1,7 +1,6 @@
 import React from 'react';
 import './register.css';
 import { useState , useHistory } from 'react';
-// import { useHistory } from 'react-router-dom';
 
 
 const RegistrationForm=()=> {

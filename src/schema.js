@@ -18,13 +18,23 @@ const registrationSchema = new mongoose.Schema({
     priceForPromotion: {type: Number, default: 0},
     username: {type: String, required: true},
     password: {type: String, required: true}
+
+  });
+  
+
+  module.exports= mongoose.model('users', registrationSchema);
+
+
+
+  // Create a model for the schema
+  //const Registration
     // instagramhandlelink:  {type: String, required: true},
     // twitterhandlelink:{type: String, required: true},
     // youtubecwrfwrghannellink: {type: String, required: true},
 
-  });
-  
-  // Create a model for the schema
-  //const Registration
-  module.exports= mongoose.model('users', registrationSchema);
+
+
+
+
+
   

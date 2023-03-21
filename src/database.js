@@ -58,7 +58,7 @@ app.post('/api/register', jsonParser ,(req, res) => {
             })
             .catch((err)=>console.warn(err))
         })
-            // *******************************************************************************
+            // *******************************************************************************new above
 
          //   newRegistration.save((err) => {
             //     if (err) {
@@ -92,7 +92,7 @@ app.post('/api/login',jsonParser, async (req, res) =>
     // Generate and send JWT
     const token = jwt.sign({ userId: user._id }, 'secretKey');
     res.json({ token });
-// *******************************************************************************
+// *******************************************************************************new below
 
      Registration.findOne({ username }).then((data)=>{
         var decipher=crypto.createDecipheriv(algo,key);
