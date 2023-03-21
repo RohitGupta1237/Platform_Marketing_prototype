@@ -9,7 +9,7 @@ function App() {
     // <div className="App">
     //   <nav>
     //     <button className="button influencer-button">Influencer</button>
-    //     <button className="button brand-button">Brand</button>
+    //     <buttfsrgon className="button brand-button">Brand</button>
     //   </nav>
     // </div>
 
