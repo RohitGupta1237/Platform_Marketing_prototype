@@ -18,8 +18,9 @@ mongoose.connect('hi',
 });
 
 
-// Create a ro444ute to handle the form submission
-app.post('/api/register', jsonParser ,(req, res) => {
+// Create a route to handle the form submission
+app.post('/api/register', jsonParser ,(req, res) => 
+{
     var cipher =crypto.createCipheriv(algo,key);
     var encrypted=cipher.update(req.body.password , 'utf-8' , 'hex')+cipher.final('hex');
   // Create a new instance of the Registration model with the submitted data
@@ -81,7 +82,7 @@ app.post('/api/login',jsonParser, async (req, res) =>
     const user = await Registration.findOne({ username });
     if (!user) {
       return res.status(401).json({ message: 'Invalid email or password' });
-    }
+    } 
   
     // Check if password is correct
     const isPasswordCorrect = await bcrypt.compare(password, user.password);

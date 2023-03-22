@@ -1,6 +1,6 @@
 import React from 'react';
 import './register.css';
-import { useState , useHistory } from 'react';
+import { useState  } from 'react';
 
 
 const RegistrationForm=()=> {
@@ -23,10 +23,12 @@ const RegistrationForm=()=> {
   const [viewsPerTweet, setviewsPerTweet] = useState('');
   const [priceForPromotion, setpriceForPromotion] = useState('');
   
-  const history = useHistory();
+           //   const history = useHistory();
 
   const handlePaymentCallback = (paymentStatus) => {
     if (paymentStatus === 'success') {
+
+
       // If payment is successful, save theyup  user data to the database
       fetch('/api/register', {
         method: 'POST',
@@ -39,8 +41,11 @@ const RegistrationForm=()=> {
       })
         .then(response => response.text())
         .then(() => {
+
           // Redirect the user to a thank-you page
-          history.push('/thank-you');
+          //   history.push('/thank-you');
+
+           window.location.href = '/';
         })
         .catch(error => console.error(error));
     } else {
@@ -77,8 +82,20 @@ const RegistrationForm=()=> {
 
         </div>
         <div className="form-group">
+      <label htmlFor="username">Username:</label>
+      <input type="username" value={username} onChange={e => setusername(e.target.value)} />
 
-          <label htmlFor="kindOfInfluencer">Kind of Influencer:</label>
+      {/* <input type="text" id="username" name="username" /> */}
+    </div>
+    <div className="form-group">
+      <label htmlFor="password">Password:</label>
+      <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+
+      {/* <input type="password" id="password" name="password" /> */}
+    </div>
+        <div className="form-group">
+
+          <label htmlFor="kindOfInfluencer">Industry:</label>
           <input type="text" value={kindOfInfluencer} onChange={e => setkindOfInfluencer(e.target.value)} />
 
           {/* <input type="text" id="kindOfInfluencer" name="kindOfInfluencer" /> */}
@@ -91,19 +108,19 @@ const RegistrationForm=()=> {
           {/* <input type="text" id="followers" name="followers" /> */}
         </div>
         <div className="form-group">
-          <label htmlFor="subscribersTwitter">Subscribers on Twitter:</label>
+          <label htmlFor="subscribersTwitter">Followers on Twitter:</label>
           <input type="text" value={subscribersTwitter} onChange={e => setsubscribersTwitter(e.target.value)} />
 
           {/* <input type="text" id="subscribersTwitter" name="subscribersTwitter" /> */}
         </div>
         <div className="form-group">
-          <label htmlFor="subscribersInstagram">Subscribers on Instagram:</label>
+          <label htmlFor="subscribersInstagram">Followers on Instagram:</label>
           <input type="text" value={subscribersInstagram} onChange={e => setsubscribersInstagram(e.target.value)} />
 
           {/* <input type="text" id="subscribersInstagram" name="subscribersInstagram" /> */}
         </div>
         <div className="form-group">
-          <label htmlFor="subscribersFacebook">Subscribers on Facebook:</label>
+          <label htmlFor="subscribersFacebook">Followers on Facebook:</label>
           <input type="text" value={subscribersFacebook} onChange={e => setsubscribersFacebook(e.target.value)} />
 
           {/* <input type="text" id="subscribersFacebook" name="subscribersFacebook" /> */}
@@ -121,13 +138,13 @@ const RegistrationForm=()=> {
           {/* <input type="text" id="subscribersSnapchat" name="subscribersSnapchat" /> */}
         </div>
         <div className="form-group">
-          <label htmlFor="subscribersTikTok">Subscribers on TikTok:</label>
+          <label htmlFor="subscribersTikTok">Followers on TikTok:</label>
           <input type="text" value={subscribersTikTok} onChange={e => setsubscribersTikTok(e.target.value)} />
 
           {/* <input type="text" id="subscribersTikTok" name="subscribersTikTok" /> */}
         </div>
         <div className="form-group">
-          <label htmlFor="areaOfActive">Area of Active:</label>
+          <label htmlFor="areaOfActive">Which city constitutes your major percentage of followers:</label>
           <input type="text" value={areaOfActive} onChange={e => setareaOfActive(e.target.value)} />
 
           {/* <input type="text" id="areaOfActive" name="areaOfActive" /> */}
@@ -161,18 +178,6 @@ const RegistrationForm=()=> {
       <input type="text" value={priceForPromotion} onChange={e => setpriceForPromotion(e.target.value)} />
 
       {/* <input type="text" id="priceForPromotion" name="priceForPromotion" /> */}
-    </div>
-    <div className="form-group">
-      <label htmlFor="username">Username:</label>
-      <input type="username" value={username} onChange={e => setusername(e.target.value)} />
-
-      {/* <input type="text" id="username" name="username" /> */}
-    </div>
-    <div className="form-group">
-      <label htmlFor="password">Password:</label>
-      <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-
-      {/* <input type="password" id="password" name="password" /> */}
     </div>
     <button type="submit">Register</button>
   </form>

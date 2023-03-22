@@ -1,8 +1,12 @@
 import React from 'react';
 import './loginpage.css';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
 
 function LoginPage1() {
+
+    const navigate = useNavigate();
 
   const [username, setusername] = useState('');
   const [password, setpassword] = useState('');
@@ -22,6 +26,7 @@ function LoginPage1() {
         const { token } = await response.json();
         localStorage.setItem('jwtToken', token); // Store JWT in local storage
         // Redirect to profhbhbjbile page or other protected route
+        navigate("/profile");
       } else {
         setError('Invalid email or password');
       }

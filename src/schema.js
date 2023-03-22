@@ -26,8 +26,6 @@ const registrationSchema = new mongoose.Schema({
 
 
 
-  // Create a model for the schema
-  //const Registration
     // instagramhandlelink:  {type: String, required: true},
     // twitterhandlelink:{type: String, required: true},
     // youtubecwrfwrghannellink: {type: String, required: true},
